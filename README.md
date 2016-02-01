@@ -3,8 +3,6 @@ devilTransform
 
 Help you trade with GCJ-84 and BD-09 devils while maintaining your WGS-84 sanity.
 
-Also helps you practise your Madoko skills.
-
 
 What are these evil coordinate systems?
 ---------------------------------------
@@ -19,10 +17,10 @@ obfuscation
 TODO: filter out the obfuscation part from the transformation part.
 
 ~ MathDefs
-\newcommand\glat{\rm obfsLatWGS}
-\newcommand\glng{\rm obfsLngWGS}
-\newcommand\wlat{\rm weirdLat}
-\newcommand\wlng{\rm weirdLng}
+\newcommand\glat{{\rm obfsLatWGS}}
+\newcommand\glng{{\rm obfsLngWGS}}
+\newcommand\wlat{{\rm weirdLat}}
+\newcommand\wlng{{\rm weirdLng}}
 ~ 
 
 $$
@@ -56,7 +54,7 @@ relatively small error tolerance in a generally quick way:
   element respectively.
 2. Let $t$ be $1$.
 3. Repeat while $t < t_{max} \land (\abs{\Delta x} > tol \lor \abs{\Delta y} > tol)$:
-  1. Let $(x_0, y_0)$ be $(x,y)$.
+  i. Let $(x_0, y_0)$ be $(x,y)$.
   2. Let $x$ be $\wlat(x, y)$.
   3. Let $y$ be $\wlng(x, y)$.
   4. Let $(\Delta x, \Delta y)$ be $(x_0 - x, y_0 - y)$.
